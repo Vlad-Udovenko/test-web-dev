@@ -1,0 +1,138 @@
+.instruction{
+    counter-reset: section;
+    color: white;
+    max-width: 1170px;
+    font-family:'Vollkorn', serif;
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 60px;
+    &__header{
+        font-size: 40px;
+        text-transform: uppercase;
+        border-bottom: 11px solid #DBAB00;
+        padding-bottom: 20px;
+        padding-top: 50px;
+    }
+    &__block{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin:50px 0 40px;
+        &_container{
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            font-family:'Roboto', sans-serif;
+            
+            &::before{
+                counter-increment: section;
+                content:counter(section); 
+                position: absolute;
+                color: #DBAB00;
+                font-size: 40px;
+                font-weight: bold;
+                left: -25px;
+                top: 72px;
+            }
+            &:after{
+                content: url(../img/arrow-instruction.png);
+                width: 94px;
+                height: 18px;
+                position: absolute;
+                right: -70px;
+                top: 10px;
+            }
+            &:last-child:after{
+                content: none;
+            }
+            &-sprite{
+                margin: 0 auto 30px;
+            }
+            &-text{
+                text-align: left;
+                position: relative; 
+            }
+        }
+    }
+    &__text{
+        font-weight: bold;
+        font-size: 25px;
+    }
+    &__footer{
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 45px;
+        padding: 20px 70px;
+        border: 11px solid #DBAB00;
+        background-color: #F5E586;
+        color: #FF0000;
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .instruction{
+        counter-reset: section;
+        max-width: 99%;
+        box-sizing: border-box;
+        &__header{
+            font-size: 24px;
+            border-bottom: 5px solid #DBAB00;
+            padding-bottom: 20px;
+            padding-top: 50px;
+            width: 90%;
+            margin: 0 auto;
+        }
+        &__block{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            // justify-content: space-between;
+            // margin:50px 0 40px;
+            &_container{
+                width: 100%;
+                flex-direction: row;
+                font-family:'Roboto', sans-serif;
+                justify-content: inherit;
+                &::before{
+                    content:none; 
+                }
+                &:after{
+                    content: none;
+                }
+                &:last-child:after{
+                    content: none;
+                }
+                &-sprite{
+                    margin: 0 0 30px 20px;
+                }
+                &-text{
+                    text-align: left;
+                    position: relative;
+                    width: 75%;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        &__text{
+            border: 1px solid #DD9E23;
+            font-weight: bold;
+            font-size: 11px;
+            padding: 10px;
+            width: 80%;
+            margin: 0 auto 30px;
+
+        }
+        &__footer{
+            font-weight: bold;
+            font-size: 24px;
+            line-height: 26px;
+            padding: 0;
+            border: 11px solid #DBAB00;
+            background-color: #F5E586;
+            color: #FF0000;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    }
+}

@@ -1,0 +1,128 @@
+.cover{
+    background: #663F04;
+    position: relative;
+    z-index: 0;
+    &::after{
+        content: "";
+        box-shadow:inset 0 0 100px 0px rgba(255, 216, 180, 0.15);
+        width: 100%;    
+        height: 100%;
+        border-radius: 50%;
+        position: absolute;
+        z-index: -1  ;
+        top: 0;
+    }
+    .top-section{
+        z-index: 1;
+        position: relative;
+        font-family: 'Roboto', sans-serif;
+        color: #FFFFFF;
+        margin: 0 auto;
+        padding-left: 20px;
+        max-width: 1170px;
+        background-image: url(../img/top-section-bg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right;
+        &__note{
+            color: rgba(255, 255, 255, 0.2);
+            letter-spacing: 0.2em;
+            text-align: left;
+            font-size: 12px;
+        }
+        .logo{
+            font-size: 32px;
+            margin-top: 32px;
+            &_color{
+                color: #5BBA47
+            }
+        }
+        &__main-block{
+            max-width: 40%;
+            margin-top: 57px;
+            font-family: 'Vollkorn', serif;
+            font-size: 40px;
+            &_header{
+                font-family: 'Vollkorn', serif;
+                margin-top: 5px;
+                margin-bottom: 25px;
+                padding-bottom:23px; 
+                width: 100%;
+                border-bottom:11px solid #DBAB00;
+            }
+            &_text{
+                font-size: 20px;
+                font-family: 'Roboto', sans-serif;
+                margin-bottom: 47px;
+            }
+        }
+        &__block{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 535px;
+            float: right;
+            background-color: rgba(0,0,0,0.3);
+            &::after{
+                content: "";
+                background-image: url(../img/top-section-block.png);
+                width: 160px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                height: 150%;
+                position: absolute;
+                right:100px;
+                top: -30px;
+            }
+            &_text{
+                position: relative;
+                width: 260px;
+                font-weight: bold;
+                font-style: italic;
+                font-size:14px;
+                padding: 36px 0 36px 42px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .cover{
+        .top-section{
+    background-position: 140% 100% ;    
+    max-width: 100%;
+    background-size: 60%;
+            &__note{
+                font-size: 5px;
+                
+            }
+            
+            &__main-block{
+                margin-top: 20px;
+                max-width: 60%;
+                font-size: 24px;
+
+                &_text{
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-bottom: 20px;
+                }
+            }
+        &__block{
+            right: 0;
+            width: 60%;
+            &_text{
+            font-size: 7px; 
+            padding: 10px;
+            padding-left: 60px;
+            width: auto;
+            
+            }
+            &::after{
+                right: unset;
+                top: unset;
+                bottom:0;
+            }
+        }
+        }
+    } 
+}

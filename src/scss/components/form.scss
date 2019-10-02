@@ -1,0 +1,160 @@
+input[type=radio],input[type=checkbox]{
+    display: none;
+}   
+input[type=radio] + label:before {
+    content: "\1F534";
+    border: 2px solid #DBAB00;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 20px;    
+    line-height: 20px;
+    margin: -5px 5px 0 0;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0;    
+    transition: font-size ease .3s;
+}
+input[type=radio]:checked + label:before {
+    font-size: 10px;
+}
+
+input[type=checkbox] + label:before {
+    content: "";
+    display:block;
+    position: absolute;
+    left: 0;
+    transform: rotate(45deg);
+    font-size: 20px;    
+    line-height: 22px;
+    height: 7px;
+    width: 5px;
+    border: 2px solid transparent;
+    border-bottom: 3px solid red;
+    border-right:3px solid red;
+    text-align: center;
+    transition: border ease .3s;
+}
+input[type=checkbox]:checked + label:before {
+    border: 2px solid transparent;
+}
+input[type=checkbox]:checked + .form_checkbox{
+    color: gray;
+}
+
+.delivery{
+    max-width: 900px;
+    box-shadow: 0px 0px 10px 0px gray;
+    padding: 20px;
+    font-family:'Roboo', sans-serif;
+    margin: 50px auto 0;
+    .form{
+    margin: 0 auto;
+    border: 5px solid #DBAB00;
+    padding: 5% 10%;
+    font-size: 18px;
+    line-height: 23px;
+        &_header{
+            font-size: 44px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom:25px;
+        }
+        &_checkbox{
+            display: inline-block;
+            position: relative;
+            text-align: left;
+            padding-left: 40px;
+            &-border::after{
+                content: "";
+                position: absolute;
+                border: 2px solid #DBAB00;
+                width: 20px;
+                height: 20px;
+                z-index: -1;
+                left: -7px;
+                top: -2px;
+            }
+        }
+        &__radio_cover{
+            display: flex;
+            flex-direction: column;
+            height: 60px;
+            flex-wrap: wrap;
+            font-size: 10px;
+            justify-content: space-between;
+            margin: 20px 0;
+        }
+        &_input{
+            padding: 10px 0 10px 20px;
+            border:2px solid #DBAB00;
+            margin: 20px 0;
+            width: 90%;
+            color: gray;
+            &_cover{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            &-block{
+                width: 45%;
+                align-self: center;
+            }
+            &-area{
+                resize:none;
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .delivery{
+        max-width: 100%;
+        box-shadow: 0px 0px 0px 0px gray;
+        padding: 0px;
+        background-color: #FFFCEB;
+        z-index: -1; 
+        .form{
+        border: 5px solid #DBAB00;
+        font-size: 14px;
+        line-height: 11px;
+            &_header{
+                font-size: 18px;
+                margin-bottom:25px;
+            }
+            &_checkbox{
+
+                &-border::after{
+                    z-index: 0;
+                }
+            }
+            &__radio_cover{
+                flex-direction: row;
+                height: 150px;
+            }
+            &_input{
+                padding: 10px 0 10px 20px;
+                border:2px solid #DBAB00;
+                font-size: 9px;
+                margin: 20px 0;
+                width: 90%;
+                color: gray;
+                &_cover{
+                    display: flex;
+                    flex-direction: column;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                }
+                &-block{
+                    width: 100%;
+                    align-self: center;
+                }
+                &-area{
+                    resize:none;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+}
