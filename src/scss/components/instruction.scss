@@ -72,27 +72,19 @@
 }
 @media only screen and (max-width: 768px) {
     .instruction{
-        counter-reset: section;
         max-width: 99%;
         box-sizing: border-box;
         &__header{
             font-size: 24px;
             border-bottom: 5px solid #DBAB00;
-            padding-bottom: 20px;
-            padding-top: 50px;
             width: 90%;
             margin: 0 auto;
         }
         &__block{
-            display: flex;
             flex-direction: column;
-            flex-wrap: nowrap;
-            // justify-content: space-between;
-            // margin:50px 0 40px;
             &_container{
                 width: 100%;
                 flex-direction: row;
-                font-family:'Roboto', sans-serif;
                 justify-content: inherit;
                 &::before{
                     content:none; 
@@ -107,8 +99,6 @@
                     margin: 0 0 30px 20px;
                 }
                 &-text{
-                    text-align: left;
-                    position: relative;
                     width: 75%;
                     margin-bottom: 10px;
                 }
@@ -124,13 +114,9 @@
 
         }
         &__footer{
-            font-weight: bold;
             font-size: 24px;
             line-height: 26px;
             padding: 0;
-            border: 11px solid #DBAB00;
-            background-color: #F5E586;
-            color: #FF0000;
             width: 100%;
             box-sizing: border-box;
         }

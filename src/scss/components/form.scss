@@ -27,9 +27,8 @@ input[type=checkbox] + label:before {
     left: 0;
     transform: rotate(45deg);
     font-size: 20px;    
-    line-height: 22px;
-    height: 7px;
-    width: 5px;
+    height: 12px;
+    width: 8px;
     border: 2px solid transparent;
     border-bottom: 3px solid red;
     border-right:3px solid red;
@@ -116,12 +115,10 @@ input[type=checkbox]:checked + .form_checkbox{
         background-color: #FFFCEB;
         z-index: -1; 
         .form{
-        border: 5px solid #DBAB00;
         font-size: 14px;
         line-height: 11px;
             &_header{
                 font-size: 18px;
-                margin-bottom:25px;
             }
             &_checkbox{
 
@@ -134,25 +131,14 @@ input[type=checkbox]:checked + .form_checkbox{
                 height: 150px;
             }
             &_input{
-                padding: 10px 0 10px 20px;
-                border:2px solid #DBAB00;
                 font-size: 9px;
-                margin: 20px 0;
-                width: 90%;
-                color: gray;
                 &_cover{
-                    display: flex;
                     flex-direction: column;
-                    flex-wrap: wrap;
-                    justify-content: space-between;
                 }
                 &-block{
                     width: 100%;
-                    align-self: center;
                 }
                 &-area{
-                    resize:none;
-                    margin-bottom: 40px;
                 }
             }
         }

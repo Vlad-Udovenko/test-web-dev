@@ -1,37 +1,15 @@
+let items = document.querySelectorAll(".modal-item");
+let open = document.querySelectorAll(".modal-open")
+index=0;
 
-let img = document.querySelectorAll(".congruts__main_photo-img");
-img[0].addEventListener("click", (el) => {
-    el.target.classList.toggle('congruts__main_photo-img-active')
+items.forEach(element => {
+    element.style.display = "none";
 });
 
-
-let wrapper = document.getElementsByClassName("congruts__main_photo-list");
-let count = 1;
-let prevImg = 0;
-
-
-function slider() {
-    let indez = 0;
-    wrapper[0].children[prevImg].style.display = "inline-block";
-    let interval = setInterval(() => {
-        wrapper[0].children[prevImg].style.display = "none";
-        wrapper[0].children[count].style.display = "inline-block";
-        prevImg = count;
-        ++count;
-        if (count >= wrapper[0].children.length) {
-            count = 0;
-        }
-    }, 2000);
-
-img[1 || 2].addEventListener("click", () => {
-    if (indez == 0) {
-        clearInterval(interval);
-        return indez = 1;
-    } 
-    else {
-        slider()
-        return indez = 0;
-    };
-});
-};
-slider();
+for(let i=0; i<open.length; i++){
+    open[i].addEventListener("click",(el)=>{
+        items[index].style.display = "none";
+        items[i].style.display = "block";
+        index=i;
+    })
+}
