@@ -5,7 +5,7 @@
     margin: 0 auto;
     font-family: 'Vollkorn',serif;
     &__header{
-        width: 70%;
+        width: 55%;
         margin: 25px auto 30px;
         border-bottom: 9px solid #DBAB00;
         font-size: 30px;
@@ -138,7 +138,7 @@
         }
         &-button{
             margin-bottom: 20px;
-            width: 100%;
+            max-width: 100%;
         }
     }
 }
